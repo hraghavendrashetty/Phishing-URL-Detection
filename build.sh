@@ -2,8 +2,9 @@
 # exit on error
 set -o errexit
 
-# Install Python build dependencies
-pip install --upgrade pip setuptools wheel
+# First update pip and install build essentials
+python -m pip install --upgrade pip
+pip install setuptools==57.0.0 wheel==0.37.0
 
 # Install the requirements
-pip install -r requirements.txt
+pip install --no-cache-dir -r requirements.txt
