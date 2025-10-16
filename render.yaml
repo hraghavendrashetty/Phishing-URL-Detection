@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: phishing-detector
+    env: python
+    buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
+    startCommand: gunicorn wsgi:app
+    python_version: 3.8.17
